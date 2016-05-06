@@ -1,0 +1,89 @@
+@media (max-width: 768px) {
+ .content {
+ padding: 40% 0 0;
+}
+ .navbar-brand {
+padding:0;
+}
+ .navbar-toggle {
+ background-color:#5FCB5D;
+border:1px solid #5FCB5D;
+}
+ .navbar-default .navbar-toggle {
+border:1px solid #5FCB5D;
+}
+ .navbar-default .navbar-toggle .icon-bar {
+background-color: #FFF;
+}
+ #tf-home h1 {
+ color: #fff;
+ font-family: "merel-mediumuploaded_file";
+ font-size: 44px;
+ text-transform: none;
+}
+#tf-home p.lead {
+ color: #fff;
+ font-size: 24px;
+}
+.about-text p {
+margin-bottom:40px;
+}
+ button.btn.tf-btn.btn-default {
+ font-size: 18px;
+ padding: 16px 10px;
+
+}
+#tf-services h2 {
+ line-height: 40px;
+}
+#tf-services h6 {
+ padding: 0 10%;
+}
+#tf-clients h2, #tf-works h2 {
+ line-height: 40px;
+}
+#tf-clients h3 {
+ padding: 0 5%;
+}
+#tf-clients h4 {
+ padding: 0 5%;
+}
+ #tf-contact .form-control {
+ margin-bottom: 10px;
+ min-width: 216px;
+}
+.subscrp-btn {
+margin-bottom: 10px;
+}
+.navbar-nav > li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+}
+ @media (max-width: 603px) {
+#tf-menu.navbar-default {
+ background-color: rgba(0, 0, 0, 0.79);
+}
+#tf-works li.pull-right, #tf-works li.pull-left {
+ margin-top: 10px;
+ float: none !important;
+ text-align: center;
+ display: block;
+}
+label {
+ float: none !important
+}
+.pull-left.fnav, .pull-right.fnav {
+ float: none !important;
+ text-align: center;
+}
+ .hover-bg .hover-text {
+ padding: 12% 10%;
+}
+.footer-logo { margin-bottom:30px; margin-top:30px;}
+}
+@media (max-width: 360px) {
+.hover-bg .hover-text {
+ padding: 22% 10%;
+}
+}
