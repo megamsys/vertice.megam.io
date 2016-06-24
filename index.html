@@ -75,25 +75,25 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
 
               <!-- Modal Body -->
               <div class="modal-body">
-                <form role="form">
+                <form role="form" >
                   <div class="form-group">
-                    <label for="exampleInputPassword1" class="h4 ">Name</label>
-                    <input type="password" class="form-control"
-                          id="exampleInputPassword1" placeholder="Enter name"/>
+                    <label for="exampleInputName1" class="h4 ">Name</label>
+                    <input type="text" class="form-control"
+                          id="exampleInputName1" name="name" placeholder="Enter name"/>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1" class="h4 ">Email </label>
                     <input type="email" class="form-control"
-                      id="exampleInputEmail1" placeholder="Enter email"/>
+                      id="exampleInputEmail1"  name="password" placeholder="Enter email"/>
                   </div>
                   <label for="message" class="h4 ">Message</label>
-                  <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                  <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
                 </form>
               </div>
 
               <!-- Modal Footer -->
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary mod-submit"> Submit </button>
+                <button type="submit" id="submit_btn" onclick=function()  class="btn btn-primary mod-submit"> Submit </button>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
       <h1>Your virtual office</h1>
       <p class="lead">Second line of small description</strong></p>
       <p>
-       <button type="submit" class="btn tf-btn btn-default">  <a href="https://console.megamafrica.com" > Create your virtual office</a></button>
+       <button type="submit" class="btn tf-btn btn-default">  <a href="http://console.megam.io/" > Create your virtual office</a></button>
 
       </p>
       <a href="#tf-about" class="mouse-scr"><img src="img/mouse.png" alt=""></a> </div>
@@ -153,7 +153,7 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
     <div class="container">
       <div class="section-title center">
         <div class="col-sm-6 text-center">
-          <h2>We synthesyne and asseble yourconstruct , running multiple data extractionexperiments inyour project tocheckif your geneis expressing.If you like the results we will ship the  packagefor you . </h2>
+          <h2>Moving to cloud is easy. Run all business applications in a single click with absolutely no setup time.  Introducing xyz, a business platform focuses on using cloud technology to increase revenues.  </h2>
         </div>
         <div class="col-sm-6 text-center">
           <p>
@@ -236,14 +236,16 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
     <div class="section-title text-center center">
       <h2>See what people are talking about us</h2>
       <div class="clearfix"></div>
-      <div class="col-sm-6 text-center"> <img src="img/abimg1.jpg" alt="" class="img-circle">
-        <p> i created a split GFp that is basically you can atach to interacting protens and use todetect proten protein binding </p>
-        <h4>Bryn <br>
-          <span>CEO Finding23</span></h4>
+      <div class="col-sm-6 text-center"> <img src="img/jonathan3.jpg" alt="" class="img-circle">
+        <p> Vertice is a very powerful Cloud Orchestrator that redefines DevOps into a beautiful user interface, being Open-Source has allowed us to work with Megam's team to deliver an amazing Commercial Cloud platform for Service Providers. </p>
+        <h4>Jonathan P <br>
+          <span>CEO & Founder of DET.io</span></h4>
       </div>
-      <div class="col-sm-6 text-center"> <img src="img/abimg2.jpg" alt="" class="img-circle">
-        <p>We used Arturus toteach people hat dosent have a background in bology todobiohacking </p>
-        <h4>UC Denver</h4>
+      <div class="col-sm-6 text-center"> <img src="img/mehul.jpeg" alt="" class="img-circle">
+        <p>MegamAfrica Open-Source cloud hosting  has allowed us to work with Megam's team to deliver an amazing Commercial Cloud platform (virtual machines, containers, storage) for our  African customers. </p>
+        <h4>Mehul Bhatt <br>
+    <span> Director of A & M Holdings Limited</span></h4>
+        </h4>
       </div>
     </div>
   </div>
@@ -275,8 +277,8 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
       <div class="col-sm-4">
         <ul>
           <li><a href="#">About</a></li>
-          <li><a href="#"> Devcenter</a></li>
-          <li> <a href="#">Support</a> </li>
+          <li><a href="http://devcenter.megam.io/"> Devcenter</a></li>
+          <li> <a href="http://docs.megam.io/discuss">Support</a> </li>
         </ul>
       </div>
     </div>
@@ -285,7 +287,7 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
 <nav id="footer">
   <div class="container">
     <div class="text-center">
-      <p> &copy; Megam INC 2015  All rights reserved. &nbsp;&nbsp; <a href="#">Design&nbsp;<img src="img/desgin-logo.png" alt=""></a> </p>
+      <p> &copy; Megam INC 2016  All rights reserved. &nbsp;&nbsp; <a href="#">Design&nbsp;<img src="img/desgin-logo.png" alt=""></a> </p>
     </div>
   </div>
 </nav>
@@ -302,5 +304,53 @@ https://github.com/ranjithamca/vertice.megam.io<!DOCTYPE html>
 <!-- Javascripts
     ================================================== -->
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submit_btn").click(function() {
+      var proceed = true;
+        //simple validation at client's end
+        //loop through each field and we simply change border color to red for invalid fields
+    $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+      $(this).css('border-color','');
+      if(!$.trim($(this).val())){ //if this field is empty
+        $(this).css('border-color','red'); //change border color to red
+        proceed = false; //set do not proceed flag
+      }
+      //check invalid email
+      var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+        $(this).css('border-color','red'); //change border color to red
+        proceed = false; //set do not proceed flag
+      }
+    });
+        if(proceed) //everything looks good! proceed...
+        {
+      //get input field values data to be sent to server
+            post_data = {
+        'user_name'		: $('input[name=name]').val(),
+        'user_email'	: $('input[name=email]').val(),
+        'msg'			: $('textarea[name=message]').val()
+      };
+            //Ajax post data to server
+            $.post('contact_me.php', post_data, function(response){
+        if(response.type == 'error'){ //load json data from server and output message
+          output = '<div class="error">'+response.text+'</div>';
+          }else{
+            output = '<div class="success">'+response.text+'</div>';
+          //reset values in all input fields
+          $("#contact_form  input[required=true], #contact_form textarea[required=true]").val('');
+          $("#contact_form #contact_body").slideUp(); //hide form after success
+        }
+        $("#contact_form #contact_results").hide()(output).slideDown();
+            }, 'json');
+        }
+    });
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() {
+        $(this).css('border-color','');
+        $("#result").slideUp();
+    });
+});
+		    //reset previously set border colors and
 </body>
 </html>
